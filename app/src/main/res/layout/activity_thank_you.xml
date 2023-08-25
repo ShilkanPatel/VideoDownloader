@@ -30,6 +30,13 @@
 
             </RelativeLayout>
 
+            <LinearLayout
+                android:layout_below="@+id/rl"
+                android:id="@+id/native_layout"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:orientation="vertical" />
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

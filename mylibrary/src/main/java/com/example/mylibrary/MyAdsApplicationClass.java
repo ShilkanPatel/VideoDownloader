@@ -1,5 +1,7 @@
 package com.example.mylibrary;
 
+import static com.example.mylibrary.Provider.GoogleAds.AD_OPEN_APP_ID;
+
 import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
@@ -26,7 +28,6 @@ import java.util.Date;
 public class MyAdsApplicationClass implements Application.ActivityLifecycleCallbacks, LifecycleObserver {
 
     private static final String LOG_TAG = "AppOpenAds";
-    private static final String AD_UNIT_ID = "ca-app-pub-3940256099942544/3419835294"; // Use your own Ad Unit ID here
 
     private AppOpenAdManager appOpenAdManager;
     private Activity currentActivity;
@@ -36,7 +37,8 @@ public class MyAdsApplicationClass implements Application.ActivityLifecycleCallb
         // Initialize the Google Mobile Ads SDK
         MobileAds.initialize(context, new OnInitializationCompleteListener() {
             @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {}
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
         });
 
         // Register activity lifecycle callbacks
@@ -49,7 +51,8 @@ public class MyAdsApplicationClass implements Application.ActivityLifecycleCallb
     }
 
     @Override
-    public void onActivityCreated(Activity activity, Bundle savedInstanceState) {}
+    public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
+    }
 
     @Override
     public void onActivityStarted(Activity activity) {
@@ -59,19 +62,24 @@ public class MyAdsApplicationClass implements Application.ActivityLifecycleCallb
     }
 
     @Override
-    public void onActivityResumed(Activity activity) {}
+    public void onActivityResumed(Activity activity) {
+    }
 
     @Override
-    public void onActivityStopped(Activity activity) {}
+    public void onActivityStopped(Activity activity) {
+    }
 
     @Override
-    public void onActivityPaused(Activity activity) {}
+    public void onActivityPaused(Activity activity) {
+    }
 
     @Override
-    public void onActivitySaveInstanceState(Activity activity, Bundle bundle) {}
+    public void onActivitySaveInstanceState(Activity activity, Bundle bundle) {
+    }
 
     @Override
-    public void onActivityDestroyed(Activity activity) {}
+    public void onActivityDestroyed(Activity activity) {
+    }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_START)
     protected void onMoveToForeground() {
@@ -97,25 +105,24 @@ public class MyAdsApplicationClass implements Application.ActivityLifecycleCallb
             isLoadingAd = true;
             AdRequest request = new AdRequest.Builder().build();
             AppOpenAd.load(
-                context,
-                AD_UNIT_ID,
-                request,
-                AppOpenAd.APP_OPEN_AD_ORIENTATION_PORTRAIT,
-                new AppOpenAd.AppOpenAdLoadCallback() {
-                    @Override
-                    public void onAdLoaded(AppOpenAd ad) {
-                        Log.d(LOG_TAG, "Ad was loaded.");
-                        appOpenAd = ad;
-                        isLoadingAd = false;
-                        loadTime = (new Date()).getTime();
-                    }
+                    context, AD_OPEN_APP_ID,
+                    request,
+                    AppOpenAd.APP_OPEN_AD_ORIENTATION_PORTRAIT,
+                    new AppOpenAd.AppOpenAdLoadCallback() {
+                        @Override
+                        public void onAdLoaded(AppOpenAd ad) {
+                            Log.d(LOG_TAG, "Ad was loaded.");
+                            appOpenAd = ad;
+                            isLoadingAd = false;
+                            loadTime = (new Date()).getTime();
+                        }
 
-                    @Override
-                    public void onAdFailedToLoad(LoadAdError loadAdError) {
-                        Log.d(LOG_TAG, loadAdError.getMessage());
-                        isLoadingAd = false;
-                    }
-                });
+                        @Override
+                        public void onAdFailedToLoad(LoadAdError loadAdError) {
+                            Log.d(LOG_TAG, loadAdError.getMessage());
+                            isLoadingAd = false;
+                        }
+                    });
         }
 
         public void showAdIfAvailable(@NonNull final Activity activity, @NonNull OnShowAdCompleteListener onShowAdCompleteListener) {
@@ -170,6 +177,7 @@ public class MyAdsApplicationClass implements Application.ActivityLifecycleCallb
             return (dateDifference < (numMilliSecondsPerHour * numHours));
         }
     }
+
     public interface OnShowAdCompleteListener {
         void onShowAdComplete();
     }

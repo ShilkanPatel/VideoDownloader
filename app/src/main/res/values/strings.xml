@@ -4,10 +4,10 @@
 
     <!--AdMob Id-->
 <!--    live-->
-<!--    <string name="admob_app_id" translatable="false">ca-app-pub-3456804907728652~5697663860</string>-->
+    <string name="admob_app_id" translatable="false">ca-app-pub-3456804907728652~5697663860</string>
 
 <!--    testing-->
-    <string name="admob_app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+<!--    <string name="admob_app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>-->
 
 
 

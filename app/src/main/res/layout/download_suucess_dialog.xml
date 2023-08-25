@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/_10sdp"
+    android:layout_margin="@dimen/_10sdp"
+    android:layout_gravity="center"
+    app:cardElevation="@dimen/_4sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            android:text="Download Successfully"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="@dimen/_12ssp"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:id="@+id/native_layout"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:orientation="vertical" />
+        <TextView
+            android:id="@+id/tvShow"
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:text="Show"
+            android:background="@drawable/btn_download"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

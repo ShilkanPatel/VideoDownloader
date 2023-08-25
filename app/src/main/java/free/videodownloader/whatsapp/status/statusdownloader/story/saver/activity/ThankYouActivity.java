@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.mylibrary.BaseClass;
+
 import free.videodownloader.whatsapp.status.statusdownloader.story.saver.R;
 
 public class ThankYouActivity extends AppCompatActivity {
@@ -15,6 +17,7 @@ public class ThankYouActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thank_you);
 
+        BaseClass.getInstance(this).showNativeAd(findViewById(R.id.native_layout), null);
         findViewById(R.id.txtYes).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

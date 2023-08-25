@@ -56,6 +56,9 @@ public class GoogleAds {
     public static String AD_MOB_NATIVE = "";            //"ca-app-pub-3940256099942544/1044960115";
     public static String AD_MOB_REWARD = "";            //"ca-app-pub-3940256099942544/1044960115"; Interstial //ca-app-pub-3940256099942544/5354046379
 
+    public static  String AD_OPEN_APP_ID = "";// Test :- "ca-app-pub-3940256099942544/3419835294"; //Live :- ca-app-pub-3456804907728652~5697663860
+
+
     //google loaded tags
     public static boolean isGoogleBannerLoaded;
     public static boolean isGoogleNativeLoaded;
@@ -400,6 +403,7 @@ public class GoogleAds {
             AD_MOB_INTERSTITIAL = googleJson.getString(AdsConstant.FullScreen_ID);
             AD_MOB_NATIVE = googleJson.getString(AdsConstant.Native_ID);
             AD_MOB_REWARD = googleJson.getString(AdsConstant.RewardAd_ID);
+            AD_OPEN_APP_ID = googleJson.getString(AdsConstant.OPEN_APP_ID);
         } catch (JSONException e) {
             e.printStackTrace();
         }

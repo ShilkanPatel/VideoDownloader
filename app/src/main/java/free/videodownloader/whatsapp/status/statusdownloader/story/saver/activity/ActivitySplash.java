@@ -224,8 +224,8 @@ public class ActivitySplash extends AppCompatActivity {
             project_data.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                    loadAsds(snapshot.child("AdsJson").getValue().toString());
-                    loadAsds(getJsonString());
+                    loadAsds(snapshot.child("AdsJson").getValue().toString());
+//                    loadAsds(getJsonString());
                     HomeScreen();
                     try {
                         SharePrefereces.getInstance(ActivitySplash.this).putString(SharePrefereces.MYAdsJson, snapshot.child("AdsJson").getValue().toString());

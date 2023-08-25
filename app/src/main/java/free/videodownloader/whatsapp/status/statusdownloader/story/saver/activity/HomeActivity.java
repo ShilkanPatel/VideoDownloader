@@ -84,6 +84,7 @@ public class HomeActivity extends AppCompatActivity {
         final Dialog dialog = new Dialog(this, R.style.fulldialog);
         dialog.setContentView(R.layout.exit_dialog);
         dialog.setCancelable(false);
+        BaseClass.getInstance(HomeActivity.this).showNativeAd(dialog.findViewById(R.id.native_layout), null);
         ((TextView) dialog.findViewById(R.id.txtYes)).setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 dialog.dismiss();

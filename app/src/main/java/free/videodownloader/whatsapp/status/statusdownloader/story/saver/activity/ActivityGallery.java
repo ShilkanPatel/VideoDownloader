@@ -90,15 +90,16 @@ public class ActivityGallery extends AppCompatActivity {
     private void setupViewPager(ViewPager viewPager) {
 
         ViewPagerAdapter adapter = new ViewPagerAdapter(activity.getSupportFragmentManager(), BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        adapter.addFragment(new FragmentWhatsAppDowndleded(), "Whatsapp");
+        adapter.addFragment(new FragmentInstaDownloaded(), "Instagram");
+        adapter.addFragment(new FragmentFBDownloaded(), "Facebook");
+        adapter.addFragment(new FragmentTikTokDownloaded(), "TikTok");
         adapter.addFragment(new FragmentSnackVideoDownloaded(), "Snack Video");
         adapter.addFragment(new FragmentSharechatDownloaded(), "Sharechat");
         adapter.addFragment(new FragmentRoposoDownloaded(), "Roposo");
-        adapter.addFragment(new FragmentInstaDownloaded(), "Instagram");
-        adapter.addFragment(new FragmentWhatsAppDowndleded(), "Whatsapp");
-        adapter.addFragment(new FragmentTikTokDownloaded(), "TikTok");
-        adapter.addFragment(new FragmentFBDownloaded(), "Facebook");
-        adapter.addFragment(new FragmentTwitterDownloaded(), "Twitter");
         adapter.addFragment(new FragmentLikeeDownloaded(), "Likee");
+        adapter.addFragment(new FragmentTwitterDownloaded(), "Twitter");
+
 
         viewPager.setAdapter(adapter);
         viewPager.setOffscreenPageLimit(4);

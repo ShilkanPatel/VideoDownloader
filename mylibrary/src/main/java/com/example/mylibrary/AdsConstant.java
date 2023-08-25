@@ -16,4 +16,5 @@ public class AdsConstant {
     public static final String FullScreen_ID = "FullScreen";
     public static final String Native_ID = "Native";
     public static final String RewardAd_ID = "RewardAD";
+    public static final String OPEN_APP_ID = "OpenAppID";
 }
