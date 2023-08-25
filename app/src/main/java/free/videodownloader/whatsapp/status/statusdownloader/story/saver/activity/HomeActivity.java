@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.mylibrary.BaseClass;
 
@@ -15,7 +17,6 @@ import free.videodownloader.whatsapp.status.statusdownloader.story.saver.utils.C
 
 public class HomeActivity extends AppCompatActivity {
     boolean doubleBackToExitPressedOnce = false;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,9 +54,8 @@ public class HomeActivity extends AppCompatActivity {
         findViewById(R.id.rate_ll).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                BaseClass.getInstance(HomeActivity.this).showInterstitialAds(() -> {
-                    Common.RateApp(HomeActivity.this);
-                });
+                Common.RateApp(HomeActivity.this);
+
 //                MyAds.showInterstitial(HomeActivity.this, () ->
 //                        Common.RateApp(HomeActivity.this)
 //                );
@@ -65,9 +65,8 @@ public class HomeActivity extends AppCompatActivity {
         findViewById(R.id.more_ll).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                BaseClass.getInstance(HomeActivity.this).showInterstitialAds(() -> {
-                    Common.RateApp(HomeActivity.this);
-                });
+                    Common.MoreApp(HomeActivity.this);
+
 //                MyAds.showInterstitial(HomeActivity.this, () ->
 //                        Common.RateApp(HomeActivity.this)
 //                );

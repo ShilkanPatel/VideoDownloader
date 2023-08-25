@@ -28,6 +28,7 @@ import free.videodownloader.whatsapp.status.statusdownloader.story.saver.fragmen
 import free.videodownloader.whatsapp.status.statusdownloader.story.saver.fragment.FragmentTwitterDownloaded;
 import free.videodownloader.whatsapp.status.statusdownloader.story.saver.fragment.FragmentWhatsAppDowndleded;
 import free.videodownloader.whatsapp.status.statusdownloader.story.saver.utils.AppLangSessionManager;
+import free.videodownloader.whatsapp.status.statusdownloader.story.saver.utils.Common;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,7 +55,7 @@ public class ActivityGallery extends AppCompatActivity {
         setLocale(appLangSessionManager.getLanguage());
 //        MyAds.showGoogleSmartBanner(this, findViewById(R.id.banner_container_smart));
         BaseClass.getInstance(this).showBannerAd(findViewById(R.id.banner_container_smart));
-
+        Common.RateApp(this,false);
         initViews();
     }
 

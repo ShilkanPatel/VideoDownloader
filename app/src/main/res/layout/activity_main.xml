@@ -536,6 +536,26 @@
                         </RelativeLayout>
 
                     </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/rectangle_white"
+                        android:elevation="4dp"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <ImageView
+                            android:id="@+id/myAdsBanner"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:scaleType="fitXY"
+                            android:padding="10dp"
+                            android:src="@drawable/myadsbanner" />
+
+                    </LinearLayout>
 
                     <RelativeLayout
                         android:id="@+id/rvMoreApp"

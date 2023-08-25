@@ -18,6 +18,7 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.Window;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
@@ -31,6 +32,7 @@ import free.videodownloader.whatsapp.status.statusdownloader.story.saver.R;
 import free.videodownloader.whatsapp.status.statusdownloader.story.saver.databinding.ActivityMainBinding;
 import free.videodownloader.whatsapp.status.statusdownloader.story.saver.utils.AppLangSessionManager;
 import free.videodownloader.whatsapp.status.statusdownloader.story.saver.utils.ClipboardListener;
+import free.videodownloader.whatsapp.status.statusdownloader.story.saver.utils.Common;
 import free.videodownloader.whatsapp.status.statusdownloader.story.saver.utils.Util;
 
 import com.example.mylibrary.BaseClass;
@@ -47,6 +49,7 @@ import static free.videodownloader.whatsapp.status.statusdownloader.story.saver.
 public class ActivityMain extends AppCompatActivity implements View.OnClickListener {
     ActivityMain activity_vdr_;
     ActivityMainBinding binding;
+    ImageView myAdsBanner;
     //    boolean doubleBackToExitPressedOnce = false;
     private ClipboardManager clipBoard_vds_;
     String[] permissions = new String[]{
@@ -71,6 +74,13 @@ public class ActivityMain extends AppCompatActivity implements View.OnClickListe
 //        MyAds.showGoogleSmartBanner(this, findViewById(R.id.banner_container_smart));
         BaseClass.getInstance(this).showBannerAd(findViewById(R.id.banner_container_smart));
 
+        myAdsBanner = findViewById(R.id.myAdsBanner);
+        myAdsBanner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Common.UriOpen(ActivityMain.this,"https://bit.ly/3NvX650");
+            }
+        });
         initViews();
     }
 
