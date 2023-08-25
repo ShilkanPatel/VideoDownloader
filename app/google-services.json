@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "31324162186",
+    "project_id": "video-downloader-97415",
+    "storage_bucket": "video-downloader-97415.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:31324162186:android:c19861375f58dc90d28573",
+        "android_client_info": {
+          "package_name": "free.videodownloader.whatsapp.status.statusdownloader.story.saver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "31324162186-a0iq5orkdtjdkod3fqupjp9t88u060dk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbpgiERhX4FeV_voi4Z45D6ASewSnf5RA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "31324162186-a0iq5orkdtjdkod3fqupjp9t88u060dk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
